@@ -1,0 +1,79 @@
+
+CSE 320 Summer 2018
+
+Computer Project #4 -- Sequential Circuits
+
+a) Give your name, MSU PID and sequence derived from your MSU PID.
+
+  Name: Ben Traines
+
+  MSU PID: A51468549
+
+  Derived sequence: A514689
+ 
+
+b) Complete the following truth tables to describe the Boolean functions which
+form the basis for your circuits.  For each function, replace the hyphens with
+the appropriate entry (0, 1 or d), where 'd' represents the "don't care"
+condition.
+
+  Current   Next
+  w x y z | W() X() Y() Z()
+  --------+----------------
+  0 0 0 0 |  d   d   d   d 
+  0 0 0 1 |  0   1   0   0 
+  0 0 1 0 |  d   d   d   d 
+  0 0 1 1 |  d   d   d   d 
+  0 1 0 0 |  0   1   1   0 
+  0 1 0 1 |  0   0   0   1 
+  0 1 1 0 |  1   0   0   0 
+  0 1 1 1 |  d   d   d   d 
+  1 0 0 0 |  1   0   0   1 
+  1 0 0 1 |  1   0   1   0 
+  1 0 1 0 |  0   1   0   1 
+  1 0 1 1 |  d   d   d   d 
+  1 1 0 0 |  d   d   d   d 
+  1 1 0 1 |  d   d   d   d 
+  1 1 1 0 |  d   d   d   d 
+  1 1 1 1 |  d   d   d   d 
+
+
+c) Complete the following Karnaugh maps for your Boolean functions.  For each
+input combination, replace the hyphen with the appropriate entry (0, 1 or d).
+
+
+   W()  | w'x'| w'x | wx  | wx' |           X()  | w'x'| w'x | wx  | wx' |
+   -----+-----+-----+-----+-----+           -----+-----+-----+-----+-----+
+   y'z' |  d  |  0  |  d  |  1  |           y'z' |  d  |  1  |  d  |  0  |
+        +-----+-----+-----+-----+                +-----+-----+-----+-----+
+   y'z  |  0  |  0  |  d  |  1  |           y'z  |  1  |  0  |  d  |  0  |
+        +-----+-----+-----+-----+                +-----+-----+-----+-----+
+   yz   |  d  |  d  |  d  |  d  |           yz   |  d  |  d  |  d  |  d  |
+        +-----+-----+-----+-----+                +-----+-----+-----+-----+
+   yz'  |  d  |  1  |  d  |  0  |           yz'  |  d  |  0  |  d  |  1  |
+        +-----+-----+-----+-----+                +-----+-----+-----+-----+
+
+
+   Y()  | w'x'| w'x | wx  | wx' |           Z()  | w'x'| w'x | wx  | wx' |
+   -----+-----+-----+-----+-----+           -----+-----+-----+-----+-----+
+   y'z' |  d  |  1  |  d  |  0  |           y'z' |  d  |  0  |  d  |  1  |
+        +-----+-----+-----+-----+                +-----+-----+-----+-----+
+   y'z  |  0  |  0  |  d  |  1  |           y'z  |  0  |  1  |  d  |  0  |
+        +-----+-----+-----+-----+                +-----+-----+-----+-----+
+   yz   |  d  |  d  |  d  |  d  |           yz   |  d  |  d  |  d  |  d  |
+        +-----+-----+-----+-----+                +-----+-----+-----+-----+
+   yz'  |  d  |  0  |  d  |  0  |           yz'  |  d  |  0  |  d  |  1  |
+        +-----+-----+-----+-----+                +-----+-----+-----+-----+
+
+
+d) Give the minimized (simplified) expression for each of the Boolean
+functions.
+ 
+   W(w,x,y,z) = w'xyz'+wx'y'
+ 
+   X(w,x,y,z) = w'x'y'z+w'xy'z'+wx'yz'
+ 
+   Y(w,x,y,z) = w'xy'z'+wx'y'z
+ 
+   Z(w,x,y,z) = x'z'+xz
+ 
